@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/plasticDB", {
+mongoose.connect("mongodb+srv://admin-amrutheshwaro:Test123@cluster0.sjdhr.mongodb.net/plasticDB", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -48,7 +48,6 @@ app.route('/')
             'unitWeight': unitWeight
         }, function (err, document) {
             if (document == null) {
-                console.log('inside here');
                 const polymer = new Polymer({
                     polymerName: polymerName,
                     polymerGrade: polymerGrade,
