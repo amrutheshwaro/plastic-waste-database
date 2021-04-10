@@ -1,0 +1,20 @@
+<%- include('partials/header'); -%>
+
+<h1>Register plastic type</h1></br>
+
+<form method="POST" action="/">
+    <label for="polymerName">Polymer Name</label></br>
+    <input type="text" id="polymerName" name="polymerName" required></br></br>
+    <label for="polymerGrade" required>Polymer Grade</label></br>
+    <input type="text" id="polymerGrade" name="polymerGrade" required></br></br>
+    <label for="unitWeight">Unit Weight</label></br>
+    <input type="number" step="0.001" id="unitWeight" name="unitWeight" required></br></br>
+    <p>Can be recycled?</p>
+    <input type="radio" name="recyclability" id="canBeRecycled" value="1" checked>
+    <label for="canBeRecycled">Yes</label></br>
+    <input type="radio" name="recyclability" id="canNotBeRecycled" value="0">
+    <label for="canNotBeRecycled">No</label></br></br>
+    <button class="btn btn-lg btn-primary" type="submit">Generate QR code</button>
+</form>
+
+<%- include('partials/footer'); -%>
