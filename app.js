@@ -1,5 +1,6 @@
 //jshint esversion:6
 
+require('dotenv').config;
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -14,7 +15,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://admin-amrutheshwaro:Test123@cluster0.sjdhr.mongodb.net/plasticDB", {
+mongoose.connect(process.env.DB_ADDRESS, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
